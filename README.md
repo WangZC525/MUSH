@@ -1,5 +1,5 @@
 # MUSH: Multi-Scale Hierarchical Feature Extraction for Semantic Image Synthesis
-This paper proposes a new network for semantic image synthesis, which contains multi-scale hierarchical architecture for semantic feature extration. It is able to distinguish the relative position of each pixel inside its category area so as to get better results. Here are the codes for this paper.
+This paper proposes a new network for semantic image synthesis, which contains multi-scale hierarchical architecture for semantic feature extration. It is able to distinguish the relative position of each pixel inside its category area so as to get better results. Here is the code for this paper.
 
 ## Code Structure
 - `data:` defines classes of all datasets.
@@ -40,8 +40,11 @@ python train.py --name [experiment_name] --dataset_mode [dataset_mode] --dataroo
 `[experiment_name]` is the name that you can define for this experiment. `[dataset_mode]` can be `ade20k`, `cityscapes` or `coco`. `[path_to_dataset]` is the path to the dataset. If you want an encoder for the model, please add `--use_vae` in the command. GAN feature matching loss can be used by deleting `--no_ganFeat_loss`. Information about more options can be shown using `python train.py --help`.
 
 ## Model Testing
-Pretrained models can be downloaded [here](https://pan.baidu.com/s/1FfdCWDWqSPJtxFCWHEsI3w)(code: ktqo).Similar to model training, the model can be tested by the following command:
+Pretrained models can be downloaded [here](https://pan.baidu.com/s/1FfdCWDWqSPJtxFCWHEsI3w) (code: ktqo). Similar to model training, the model can be tested by the following command:
 ```bash
 python test.py --name [experiment_name] --dataset_mode [dataset_mode] --dataroot [path_to_dataset] 
 ```
 The loaded checkpoint can be changed using `--which_epoch`.
+
+## Acknowledgments
+Our code is based on SPADE (Spatially-Adaptive Normalization).
