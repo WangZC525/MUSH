@@ -1,5 +1,5 @@
 # MUSH: Multi-Scale Hierarchical Feature Extraction for Semantic Image Synthesis
-This paper proposes a new network for semantic image synthesis, which contains multi-scale hierarchical architecture for semantic feature extration. It is able to distinguish the relative position of each pixel inside its category area so as to get better results. Here is the code for this paper
+This paper proposes a new network for semantic image synthesis, which contains multi-scale hierarchical architecture for semantic feature extration. It is able to distinguish the relative position of each pixel inside its category area so as to get better results. Here are the codes for this paper.
 
 ## Code Structure
 - `data:` defines classes of all datasets.
@@ -12,7 +12,7 @@ This paper proposes a new network for semantic image synthesis, which contains m
 ## Installation
 Clone this repository by
 ```bash
-git clone https://github.com/onepunchcc/MUSH.git
+git clone https://github.com/WangZC525/MUSH.git
 ```
 
 ## Dependencies
@@ -40,7 +40,7 @@ python train.py --name [experiment_name] --dataset_mode [dataset_mode] --dataroo
 `[experiment_name]` is the name that you can define for this experiment. `[dataset_mode]` can be `ade20k`, `cityscapes` or `coco`. `[path_to_dataset]` is the path to the dataset. If you want an encoder for the model, please add `--use_vae` in the command. GAN feature matching loss can be used by deleting `--no_ganFeat_loss`. Information about more options can be shown using `python train.py --help`.
 
 ## Model Testing
-Similar to model training, the model can be tested by the following command:
+Pretrained models can be downloaded [here]()Similar to model training, the model can be tested by the following command:
 ```bash
 python test.py --name [experiment_name] --dataset_mode [dataset_mode] --dataroot [path_to_dataset] 
 ```
